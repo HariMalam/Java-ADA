@@ -17,20 +17,10 @@ public class insertionSort {
         for (int i = 0; i < elements; i++) {
             arr[i] = random.nextInt(1000000);
         }
-        System.out.println("Array :");
-        for (int element : arr) {
-            System.out.print(element + " ");
-        }
 
         long startTime = System.nanoTime();
         insertion(arr, elements);
         long endTime = System.nanoTime();
-
-        System.out.println("\nSorted Array:");
-        for (int element : arr) {
-            System.out.print(element + " ");
-        }
-        System.out.println();
 
         executionTimeNano = endTime - startTime;
         System.out.println("Execution Time = " + executionTimeNano + " ns");

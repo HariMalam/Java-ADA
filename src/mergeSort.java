@@ -14,20 +14,18 @@ public class mergeSort {
 
         int[] arr = new int[elements];
 
+
         for (int i = 0; i < elements; i++) {
             arr[i] = random.nextInt(1000000);
         }
-        System.out.println("Array :");
-        for (int element : arr) {
-            System.out.print(element + " ");
-        }
-        MergeSort(arr, 0, elements);
 
-        System.out.println("\nSorted Array:");
-        for (int element : arr) {
-            System.out.print(element + " ");
-        }
-        System.out.println();
+        long startTime = System.nanoTime();
+        MergeSort(arr, 0, elements);
+        long endTime = System.nanoTime();
+
+        executionTimeNano = endTime - startTime;
+        System.out.println("Execution time: " + executionTimeNano + " ns");
+
     }
 
     public static void MergeSort(int[] arr, int p, int r) {

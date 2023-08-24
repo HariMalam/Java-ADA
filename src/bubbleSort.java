@@ -18,20 +18,9 @@ public class bubbleSort {
             arr[i] = random.nextInt(100000);
         }
 
-        System.out.println("Array :");
-        for (int element: arr){
-            System.out.print(element+" ");
-        }
-
         long startTime = System.nanoTime();
         bubble(arr, elements);
         long endTime = System.nanoTime();
-
-        System.out.println("\nSorted Array:");
-        for (int element: arr){
-            System.out.print(element+" ");
-        }
-        System.out.println();
 
         executionTimeNano = endTime - startTime;
         System.out.println("Execution Time = " + executionTimeNano + " ns");
